@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
 import { db } from "../Firebase/Firebase";
 import { useHistory } from "react-router-dom";
+import loginImg from "../Assets/login.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,6 +25,10 @@ const useStyles = makeStyles((theme) => ({
   subHeading: {
     fontSize: "1.6em",
     color: "#22273B",
+  },
+  mainImg: {
+    width: "200px",
+    height: "auto",
   },
   channelDiv: {
     padding: "15px",
@@ -94,6 +99,7 @@ function Home() {
     <div style={{ backgroundColor: "#E1E1E1" }}>
       <Grid container className={classes.root}>
         <Grid item xs={12} style={{ textAlign: "center" }}>
+        <img src={loginImg} className={classes.mainImg} alt="signup img" />
           <Typography component="h1" className={classes.heading}>
             Welcome to ChatNest
           </Typography>

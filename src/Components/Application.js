@@ -25,6 +25,7 @@ import EditProfile from "./EditProfile";
 import Fade from "@material-ui/core/Fade";
 import Snackbar from "@material-ui/core/Snackbar";
 import CloseIcon from "@material-ui/icons/Close";
+import loginImg from "../Assets/login.png";
 
 const drawerWidth = 240;
 
@@ -139,6 +140,10 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  mainImg: {
+    width: "50px",
+    height: "auto",
+  },
 }));
 
 function Application(props) {
@@ -196,6 +201,7 @@ function Application(props) {
   const drawer = userDetails && (
     <div>
       <Toolbar className={classes.sideToolBar}>
+      <img src={loginImg} className={classes.mainImg} alt="signup img" />
         <Typography variant="h6" className={classes.sideToolBarText}>
           CHATNEST
         </Typography>
